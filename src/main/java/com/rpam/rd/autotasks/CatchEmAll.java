@@ -12,7 +12,7 @@ public class CatchEmAll {
         throw exception;
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception, FileNotFoundException, IOException {
         try {
             riskyMethod();
         } catch (FileNotFoundException e) {
@@ -20,7 +20,7 @@ public class CatchEmAll {
         } catch (IOException e) {
             System.out.println("Resource error");
         } catch (ArithmeticException | NumberFormatException e) {
-            System.out.println(e);
+            System.out.println(e.toString());
         }
     }
 }
