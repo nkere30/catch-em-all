@@ -8,11 +8,11 @@ public class CatchEmAll {
     //You may set another exception in this field;
     static Exception exception = new FileNotFoundException();
 
-    public static void riskyMethod() throws Exception {
+    public static void riskyMethod() throws Exception, FileNotFoundException, IOException {
         throw exception;
     }
 
-    public static void main(String[] args) throws Exception, FileNotFoundException, IOException {
+    public static void main(String[] args) throws Exception {
         try {
             riskyMethod();
         } catch (FileNotFoundException e) {
